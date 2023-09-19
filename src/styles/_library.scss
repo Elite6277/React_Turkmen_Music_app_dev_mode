@@ -1,0 +1,116 @@
+.library {
+  position: fixed;
+  box-shadow: 2px 2px 50px rgb(136, 137, 157);
+  border-radius: 1rem;
+  top: 0;
+  left: 0;
+  width: 20rem;
+  height: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+  background: #111;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  opacity: 0;
+
+  h2 {
+    padding: 2rem;
+    color: #fafafa;
+    z-index: 5;
+  }
+}
+
+.library__form {
+  width: 100%;
+  height: 15%;
+}
+
+.library__search {
+  width: 100%;
+  height: 100%;
+  //  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.library__input {
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  padding: 1rem;
+  background-color: #000;
+  //  overflow: scroll;
+}
+
+.library__icon {
+  z-index: 1;
+  padding: 20px;
+}
+
+.library-song {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.75s ease-out;
+  img {
+    width: 30%;
+  }
+  &:hover {
+    // background: rgb(235, 235, 235);
+    background: rgba(255, 255, 255, 0.2);
+  }
+  &__btn {
+    position: absolute;
+    right: 20px;
+  }
+}
+.song-description {
+  padding-left: 1rem;
+  h3 {
+    color: #fafafa;
+    font-size: 1rem;
+  }
+  h4 {
+    color: #fafafa;
+    font-size: 0.7rem;
+  }
+}
+
+/* The emerging W3C standard
+   that is currently Firefox-only */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.7) transparent;
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  //  background-color: rgba(155, 155, 155, 0.7);
+  background-color: #fafafa;
+  border-radius: 20px;
+  border: transparent;
+}
+
+.selected {
+  background: rgba(255, 255, 255, 0.2);
+}
+.active-library {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .library {
+    width: 100%;
+  }
+}
